@@ -1,0 +1,508 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Quicksand", sans-serif;
+	overflow-x: hidden;
+	background: linear-gradient(135deg, #ffeef8 0%, #e3f2fd 100%);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* ============ Welcome Page Section ============ */
+#welcome {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(135deg, #ffb6d9 0%, #a1c4fd 100%);
+}
+
+.floating-hearts {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.heart {
+	position: absolute;
+	font-size: 30px;
+	opacity: 0;
+	animation: floatUp 8s infinite;
+}
+
+@keyframes floatUp {
+	0% {
+		transform: translateY(100vh) rotate(0deg);
+		opacity: 0;
+	}
+	10% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 0.8;
+	}
+	100% {
+		transform: translateY(-100px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.hero-content {
+	text-align: center;
+	z-index: 10;
+	animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.hero-content h1 {
+	font-family: "Dancing Script", cursive;
+	font-size: 4rem;
+	color: #fff;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+	margin-bottom: 20px;
+}
+
+.hero-content p {
+	font-family: "Patrick Hand", cursive;
+	font-size: 1.5rem;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.begin-btn {
+	padding: 15px 40px;
+	font-size: 1.2rem;
+	font-family: "Patrick Hand", cursive;
+	background: #fff;
+	color: #ff6b9d;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.begin-btn:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ Memory Lane Section ============ */
+#memory-lane {
+	padding: 80px 20px;
+	background: #fff8f0;
+}
+
+.section-title {
+	font-family: "Dancing Script", cursive;
+	font-size: 3rem;
+	text-align: center;
+	color: #ff6b9d;
+	margin-bottom: 60px;
+}
+
+.timeline {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.memory-card {
+	display: flex;
+	gap: 30px;
+	margin-bottom: 50px;
+	opacity: 0;
+	transform: translateX(-50px);
+	transition: all 0.6s ease;
+}
+
+.memory-card.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.memory-card:nth-child(even) {
+	flex-direction: row-reverse;
+	transform: translateX(50px);
+}
+
+.memory-card:nth-child(even).visible {
+	transform: translateX(0);
+}
+
+.memory-img {
+	flex: 1;
+	height: 250px;
+	background: linear-gradient(135deg, #ffd6e7 0%, #c8e7ff 100%);
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	background-size: cover;
+	background-position: center;
+}
+
+.img-1 {
+	background-image: url(img/coffee_1.jpg);
+}
+
+.img-2 {
+	background-image: url(img/diwali.png);
+}
+
+.img-3 {
+	background-image: url(img/bestie_1.jpg);
+}
+
+.img-4 {
+	background-image: url(img/snap_1.jpg);
+}
+
+.memory-text {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.memory-date {
+	font-family: "Patrick Hand", cursive;
+	font-size: 1.1rem;
+	color: #ff6b9d;
+	margin-bottom: 10px;
+}
+
+.memory-caption {
+	font-family: "Dancing Script", cursive;
+	font-size: 1.8rem;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.memory-description {
+	color: #666;
+	line-height: 1.6;
+}
+
+/* ============ Letter Section ============ */
+#letter {
+	padding: 80px 20px;
+	background: linear-gradient(135deg, #ffe6f0 0%, #e6f3ff 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.letter-container {
+	max-width: 700px;
+	text-align: center;
+}
+
+.envelope {
+	width: 300px;
+	height: 200px;
+	margin: 0 auto 30px;
+	position: relative;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.envelope:hover {
+	transform: scale(1.05);
+}
+
+.envelope-body {
+	width: 100%;
+	height: 100%;
+	background: #ffb6d9;
+	border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+.envelope-flap {
+	width: 0;
+	height: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+	border-top: 100px solid #ff8cb4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: top;
+	transition: transform 0.6s;
+}
+
+.envelope.open .envelope-flap {
+	transform: rotateX(180deg);
+}
+
+.letter-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.8s ease;
+	background: #fff;
+	padding: 0 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.letter-content.show {
+	max-height: 600px;
+	padding: 30px;
+	margin-top: 20px;
+}
+
+.letter-text {
+	font-family: "Patrick Hand", cursive;
+	font-size: 1.2rem;
+	color: #333;
+	line-height: 1.8;
+	text-align: left;
+}
+
+.typewriter {
+	overflow: hidden;
+	white-space: pre-wrap;
+}
+
+/* ============ Birthday Surprise Section ============ */
+#birthday-surprise {
+	padding: 80px 20px;
+	background: #fff8f0;
+	text-align: center;
+}
+
+.cake-container {
+	max-width: 400px;
+	margin: 50px auto;
+	position: relative;
+}
+
+.cake {
+	font-size: 15rem;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+.cake:hover {
+	transform: scale(1.1);
+}
+
+.candles {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 3rem;
+	transition: opacity 0.5s;
+}
+
+.candles.blown {
+	opacity: 0;
+}
+
+.wish-message {
+	font-family: "Dancing Script", cursive;
+	font-size: 2rem;
+	color: #ff6b9d;
+	opacity: 0;
+	transition: opacity 1s;
+	margin-top: 30px;
+}
+
+.wish-message.show {
+	opacity: 1;
+}
+
+.music-toggle {
+	margin-top: 30px;
+	padding: 10px 25px;
+	background: #ff6b9d;
+	color: #fff;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	font-family: "Patrick Hand", cursive;
+	font-size: 1rem;
+}
+
+/* ============ Gift Section ============ */
+#gift {
+	padding: 80px 20px;
+	background: linear-gradient(135deg, #ffeef8 0%, #e3f2fd 100%);
+	text-align: center;
+}
+
+.gift-box {
+	font-size: 10rem;
+	cursor: pointer;
+	transition: transform 0.5s;
+	display: inline-block;
+}
+
+.gift-box:hover {
+	transform: rotate(15deg) scale(1.1);
+}
+
+.gift-reveal {
+	max-width: 600px;
+	margin: 30px auto;
+	padding: 40px;
+	background: #fff;
+	border-radius: 15px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	transform: scale(0.8);
+	transition: all 0.6s ease;
+}
+
+.gift-reveal.show {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.gift-reveal h3 {
+	font-family: "Dancing Script", cursive;
+	font-size: 2rem;
+	color: #ff6b9d;
+	margin-bottom: 20px;
+}
+
+.gift-reveal p {
+	font-family: "Patrick Hand", cursive;
+	font-size: 1.2rem;
+	color: #666;
+	line-height: 1.8;
+}
+
+/* ============ Ending Section ============ */
+#ending {
+	padding: 100px 20px;
+	background: linear-gradient(135deg, #ffb6d9 0%, #a1c4fd 100%);
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.ending-message {
+	font-family: "Dancing Script", cursive;
+	font-size: 3rem;
+	color: #fff;
+	margin-bottom: 40px;
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.replay-btn {
+	padding: 15px 40px;
+	font-size: 1.2rem;
+	font-family: "Patrick Hand", cursive;
+	background: #fff;
+	color: #ff6b9d;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s;
+}
+
+.replay-btn:hover {
+	transform: translateY(-5px);
+}
+
+/* Confetti */
+.confetti {
+	position: fixed;
+	width: 10px;
+	height: 10px;
+	background: #ff6b9d;
+	position: absolute;
+	animation: confettiFall 3s linear;
+}
+
+@keyframes confettiFall {
+	to {
+		transform: translateY(100vh) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+/* ============ Responsive Design ============ */
+@media (max-width: 768px) {
+	.hero-content h1 {
+		font-size: 2.5rem;
+	}
+
+	.hero-content p {
+		font-size: 1.2rem;
+	}
+
+	.section-title {
+		font-size: 2rem;
+	}
+
+	.memory-card {
+		flex-direction: column !important;
+		transform: translateY(30px) !important;
+	}
+
+	.memory-card.visible {
+		transform: translateY(0) !important;
+	}
+
+	.memory-img {
+		height: 200px;
+	}
+
+	.memory-card {
+		flex-direction: column !important;
+		align-items: center;
+	}
+
+	.memory-img {
+		width: 100%;
+		height: 250px; /* or auto if your image ratio matters */
+		flex: none; /* prevent it from stretching weirdly */
+		background-size: cover;
+		background-position: center;
+		display: block;
+	}
+
+	.memory-text {
+		width: 100%;
+		text-align: center;
+	}
+
+	.cake {
+		font-size: 10rem;
+	}
+
+	.gift-box {
+		font-size: 7rem;
+	}
+
+	.ending-message {
+		font-size: 2rem;
+	}
+}

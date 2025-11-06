@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>365 Days of Us - Happy Birthday</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;600&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<!-- ============ Welcome Page ============ -->
+		<section id="welcome">
+			<div class="floating-hearts"></div>
+			<div class="hero-content">
+				<h1>Happy Birthday प्रिय Sakhi 💖</h1>
+				<p>
+					Wishing you a wonderful day! May god give you the ability to
+					eat more and get a healthy body 😁.
+				</p>
+				<button
+					class="begin-btn"
+					onclick="document.getElementById('memory-lane').scrollIntoView()">
+					Begin Journey 🎈
+				</button>
+			</div>
+		</section>
+
+		<!-- ============ Memory Lane Section ============ -->
+		<section id="memory-lane">
+			<h2 class="section-title">A Little Bit of Memories ✨</h2>
+			<div class="timeline">
+				<div class="memory-card">
+					<div class="memory-img img-1"></div>
+					<div class="memory-text">
+						<div class="memory-date">January 31, 2024</div>
+						<div class="memory-caption">Coffee & Friendship 🥰</div>
+						<div class="memory-description">
+							Some moments don't need words — just good coffee and
+							better company. A simple coffee, A quiet start, A
+							friendship I'm grateful for — the start of a
+							friendship that just felt right
+						</div>
+					</div>
+				</div>
+
+				<div class="memory-card">
+					<div class="memory-img img-2"></div>
+					<div class="memory-text">
+						<div class="memory-date">October 21, 2025</div>
+						<div class="memory-caption">Favorite Irritation 😁</div>
+						<div class="memory-description">
+							You piercing voice really gets on my nerves, but
+							honestly, even that has its own special value. Happy
+							Birthday to the one who is irritating and pleasant
+							at the same time! 🙂‍↕️
+						</div>
+					</div>
+				</div>
+
+				<div class="memory-card">
+					<div class="memory-img img-3"></div>
+					<div class="memory-text">
+						<div class="memory-date">October 21, 2025</div>
+						<div class="memory-caption">
+							Looking Good, Annoying Better 😂
+						</div>
+						<div class="memory-description">
+							You looked seriously amazing that day—Ab mat kehna
+							sirf burai hi karta hu 😤.
+						</div>
+					</div>
+				</div>
+
+				<div class="memory-card">
+					<div class="memory-img img-4"></div>
+					<div class="memory-text">
+						<div class="memory-date">July 4, 2025</div>
+						<div class="memory-caption">LOL 🤣</div>
+						<div class="memory-description">
+							Yea pata nhi kya hai, bas kuch badhia dikh rha tha
+							😂
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ Letter Section ============ -->
+		<section id="letter">
+			<div class="letter-container">
+				<h2 class="section-title">A Letter Just For You 💌</h2>
+				<div class="envelope" onclick="openLetter()">
+					<div class="envelope-body">
+						<div class="envelope-flap"></div>
+					</div>
+					<p
+						style="
+							margin-top: 20px;
+							font-family: 'Patrick Hand', cursive;
+							color: #ff6b9d;
+						">
+						Click to open
+					</p>
+				</div>
+				<div class="letter-content" id="letterContent">
+					<div class="letter-text typewriter" id="letterText"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============ Birthday Surprise Section ============ -->
+		<section id="birthday-surprise">
+			<h2 class="section-title">A Silly Surprise! 🎂</h2>
+			<div class="cake-container">
+				<div class="candles" id="candles">🕯️🕯️🕯️</div>
+				<div class="cake" onclick="blowCandles()">🎂</div>
+			</div>
+			<p
+				style="
+					font-family: 'Patrick Hand', cursive;
+					font-size: 1.2rem;
+					color: #666;
+				">
+				Click the cake it's mandatory 😎😋!
+			</p>
+			<div class="wish-message" id="wishMessage">
+				Please protect your ears before listing to the music ✨
+			</div>
+			<button class="music-toggle" onclick="toggleMusic()">
+				🎵 Play Music by Panchajanya
+			</button>
+		</section>
+
+		<!-- ============ Gift Section ============ -->
+		<section id="gift">
+			<h2 class="section-title">Your Special Gift 🎁</h2>
+			<div class="gift-box" onclick="openGift()">🎁</div>
+			<p
+				style="
+					font-family: 'Patrick Hand', cursive;
+					font-size: 1.2rem;
+					color: #666;
+					margin-top: 20px;
+				">
+				Click to open your gift!
+			</p>
+			<div class="gift-reveal" id="giftReveal">
+				<h3>Your Gift Awaits! 💝</h3>
+				<p>
+					Bas itna hi yaad aapaya mujhe to 😅:
+					<br /><br />
+					• Novel (budget nhi hai iska 🙏)<br />
+					• Oreo<br />
+					• Kit Kat<br />
+					• Hare vale Kurkure!
+					<br /><br />
+					Choose kar ke bata dena 🥳
+				</p>
+			</div>
+		</section>
+
+		<!-- ============ Ending Section ============ -->
+		<section id="ending">
+			<div class="ending-message">
+				Thanks for wasting you time here 🙂‍↕️
+			</div>
+			<button
+				class="replay-btn"
+				onclick="document.getElementById('welcome').scrollIntoView()">
+				In Case You Wanna Replay 🎈
+			</button>
+		</section>
+	</body>
+</html>
